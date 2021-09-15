@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>TPE</title>
+</head>
+<body>
+    <div class="contenedor">
+        <div class="contnedorCanva">
+            <canvas id="canva" width="700" height="700"></canvas>
+        </div>
+        <div class="contenedorHerramientas">
+            <div class="botonLapiz herramienta selected">
+                <span>Lapiz</span>
+                <input type="color" value="#ff0000" name="color" id="color">
+                <input type="range" id="tamanioLapiz" min="1" max="100" value="3">
+            </div>
+            <div class="botonGoma herramienta">
+                <span>Goma</span>
+                <input type="range" id="tamanioGoma" min="1" max="100" value="3">
+            </div>
+            <div class="filtros herramienta">
+                Filtros!
+                  <ul class="botonera">
+                      <li><button id="botonNegativo">Negativo</button></li>
+                      <li><button id="botonBinarizacion">Binarización</button></li>
+                      <li><button id="botonSepia">Sepia</button></li>
+                      <li><button id="botonBlur">Blur</button></li>
+                  </ul>
+            </div>
+            <div class="brilloSaturacion herramienta">
+                <span>Brillo</span>
+                <ul class="botonera">
+                    <li><button id="botonMenosBrillo">-</button></li>
+                    <li><button id="botonMasBrillo">+</button></li>
+                </ul>
+                <span>Saturacion</span>
+                <ul class="botonera">
+                    <li><button id="botonMenosSaturacion">-</button></li>
+                    <li><button id="botonMasSaturacion">+</button></li>
+                </ul>
+            </div>
+            <div class="botonSubir herramienta"><span>Suba una imagen!</span><input type="file" name="imagen" id="inputImagen" accept="image/*"></div>
+            <div class="botonGuardar herramienta boton">guardar</div>
+            <div class="botonDescartar herramienta boton">descartar</div>
+        </div>
+    </div>
+    <script src="js.js"></script>                     
+</body>
+</html>

@@ -1,0 +1,91 @@
+body{
+    background-color:#FFCDB6;
+}
+
+.contenedor{
+    display: flex;
+    margin:25px;
+    padding: 10px;
+    justify-content: space-between;
+    height: 100%;
+    background-color: #FEB5CB;
+    border-radius: 15px;
+    border: solid 1px;
+}
+
+.contenedorHerramientas{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 3fr 1.5fr 3fr 1fr;
+    background-color: #FB779F;
+    text-align: center;
+    width: 30%;
+    gap: 30px;
+    border: solid 3px;
+    border-radius: 10px;
+    padding: 5px;
+}
+
+.herramienta{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background-color: #EB74F3;
+    border: solid 3px;
+    border-radius: 20px;
+}
+
+.selected{
+    background-color: #C70ED4;
+}
+
+.filtros{
+    grid-column: 1/3;
+}
+
+ul{
+    list-style: none;
+}
+
+.botonera{
+    display: flex;
+    padding-left: 0;
+}
+
+.boton:hover{
+    background-color: #C70ED4;
+}
+
+input#inputImagen{
+    width: 90%;
+}
+.contenedorCanva{
+    background-color: white;
+}
+
+#canva{
+    border: solid black;
+    background-color: white;
+}
+
+/* 
+    colores!!!
+.color-primary-0 { color: #FB779F }    / Main Primary color /
+.color-primary-1 { color: #FFFFFF }
+.color-primary-2 { color: #FEB5CB }
+.color-primary-3 { color: #F8447A }
+.color-primary-4 { color: #F20D53 }
+
+.color-secondary-1-0 { color: #FFA379 }    / Main Secondary color (1) /
+.color-secondary-1-1 { color: #FFFFFF }
+.color-secondary-1-2 { color: #FFCDB6 }
+.color-secondary-1-3 { color: #FF8046 }
+.color-secondary-1-4 { color: #FF590E }
+
+.color-secondary-2-0 { color: #EB74F3 }    / Main Secondary color (2) /
+.color-secondary-2-1 { color: #FFFFFF }
+.color-secondary-2-2 { color: #F6B4FB }
+.color-secondary-2-3 { color: #DD41E8 }
+.color-secondary-2-4 { color: #C70ED4 }
+*/
