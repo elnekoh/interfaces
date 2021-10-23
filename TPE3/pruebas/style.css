@@ -1,0 +1,28 @@
+html,body{
+    margin: 0;
+    padding: 0;
+    background-color: white;
+}
+.contenedor{
+    height: 100%;
+}
+#player {
+  /* Tamaño de la viñeta individual */
+  width:35px;
+  height: 51px;
+  /* Cómo hay establecido un tamaño, centramos con margin:auto */
+  margin:auto;  
+  /* Cargamos el sprite (el repeat-x se puede omitir, por defecto se repite) */
+  background:url(/TPE3/pruebas/charactersTira.png) left 0px;
+  /* Aplicamos la animación "walk": 0.8seg, 6 viñetas y repetimos infinitamente */
+  animation:walk .8s steps(6) infinite;
+  /* Posicionamos el personaje sobre el camino de madera */
+  position:relative;
+}
+
+@keyframes walk {
+    /* Partimos de la primera viñeta del sprite sheet */
+    0% { background-position: 0px; }
+    /* El tamaño total de ancho del sprite. Es negativo para que no "camine" hacia atrás */
+    100% { background-position:-210px }
+  }
