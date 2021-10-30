@@ -1,4 +1,4 @@
-/**esto fue probado en firefox, en ghpages no cargan las imagenes, aun no se porque, para que funcione bien debe utilizarse descargado */
+/**esto fue probado en firefox, problema de las imagenes en gh-pages solucionado luego del deadline */
 document.addEventListener("DOMContentLoaded", ()=>{
     /**
      * esta clase es el padre de todos los objetos en este ejercicio
@@ -209,11 +209,11 @@ document.addEventListener("DOMContentLoaded", ()=>{
      * esta funcion es para iniciar un juego, dentro tiene un gameloop
      */
     function startGame(){
-        let bg1 = new Background(0,0,"url(/background/bg1.png)",30);//como mencione antes, el orden es importante, primero se crean los fondos
-        let bg2 = new Background(0,0,"url(/background/bg2.png)",20);//y el orden de los fondos tambien importan, el primero tiene que ser el que esta "mas atras" y tiene que ser el mas lento
-        let bg3 = new Background(0,0,"url(/background/bg3.png)",15);
-        let bg4 = new Background(0,0,"url(/background/bg4.png)",9);// y el ultimo el "mas cercano", y se tiene que mover mas rapido
-        let bg5 = new Background(0,0,"url(/background/bg5.png)",9);// en este caso los ultimos 2 se mueven igual por que el ante ultimo son los arboles del camino
+        let bg1 = new Background(0,0,"url(background/bg1.png)",30);//como mencione antes, el orden es importante, primero se crean los fondos
+        let bg2 = new Background(0,0,"url(background/bg2.png)",20);//y el orden de los fondos tambien importan, el primero tiene que ser el que esta "mas atras" y tiene que ser el mas lento
+        let bg3 = new Background(0,0,"url(background/bg3.png)",15);
+        let bg4 = new Background(0,0,"url(background/bg4.png)",9);// y el ultimo el "mas cercano", y se tiene que mover mas rapido
+        let bg5 = new Background(0,0,"url(background/bg5.png)",9);// en este caso los ultimos 2 se mueven igual por que el ante ultimo son los arboles del camino
         bg1.moveBg();//luego les decimos que se muevan, tambien se puede crear un  array de fondos para hacer esto en menos lineas de codigo
         bg2.moveBg();
         bg3.moveBg();
