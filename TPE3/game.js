@@ -209,21 +209,21 @@ document.addEventListener("DOMContentLoaded", ()=>{
      * esta funcion es para iniciar un juego, dentro tiene un gameloop
      */
     function startGame(){
-        let bg1 = new Background(0,0,"url(/TPE3/background/bg1.png)",30);//como mencione antes, el orden es importante, primero se crean los fondos
-        let bg2 = new Background(0,0,"url(/TPE3/background/bg2.png)",20);//y el orden de los fondos tambien importan, el primero tiene que ser el que esta "mas atras" y tiene que ser el mas lento
-        let bg3 = new Background(0,0,"url(/TPE3/background/bg3.png)",15);
-        let bg4 = new Background(0,0,"url(/TPE3/background/bg4.png)",9);// y el ultimo el "mas cercano", y se tiene que mover mas rapido
-        let bg5 = new Background(0,0,"url(/TPE3/background/bg5.png)",9);// en este caso los ultimos 2 se mueven igual por que el ante ultimo son los arboles del camino
+        let bg1 = new Background(0,0,"url(/background/bg1.png)",30);//como mencione antes, el orden es importante, primero se crean los fondos
+        let bg2 = new Background(0,0,"url(/background/bg2.png)",20);//y el orden de los fondos tambien importan, el primero tiene que ser el que esta "mas atras" y tiene que ser el mas lento
+        let bg3 = new Background(0,0,"url(/background/bg3.png)",15);
+        let bg4 = new Background(0,0,"url(/background/bg4.png)",9);// y el ultimo el "mas cercano", y se tiene que mover mas rapido
+        let bg5 = new Background(0,0,"url(/background/bg5.png)",9);// en este caso los ultimos 2 se mueven igual por que el ante ultimo son los arboles del camino
         bg1.moveBg();//luego les decimos que se muevan, tambien se puede crear un  array de fondos para hacer esto en menos lineas de codigo
         bg2.moveBg();
         bg3.moveBg();
         bg4.moveBg();
         bg5.moveBg();
-        let jugador = new Player(100,460,"url(/TPE3/charactersTira.png");//creamos un objeto de la clase player
+        let jugador = new Player(100,460,"url(charactersTira.png");//creamos un objeto de la clase player
         jugador.spawnPlayer();//spawneamos al jugador
         jugador.run();//hacemos que inicie su animacion de "correr"
-        let octi = new Octi(640,460,"url(/TPE3/octi.png)")//instanciamos las clases octi y token
-        let token = new Token(600,460, "url(/TPE3/token.png)");
+        let octi = new Octi(640,460,"url(octi.png)")//instanciamos las clases octi y token
+        let token = new Token(600,460, "url(token.png)");
 
         let points = 0;//iniciamos los puntos en 0
 
