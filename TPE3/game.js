@@ -208,7 +208,7 @@ document.addEventListener("DOMContentLoaded", ()=>{
      * esta funcion es para iniciar un juego, dentro tiene un gameloop
      */
     function startGame(){
-        let bg1 = new Background(0,0,"url(/TPE3/background/bg1.png)",30);//como mencione antes, el orden es importante, primero se crean los fondos
+        let bg1 = new Background(0,0,"url(/tp3/background/bg1.png)",30);//como mencione antes, el orden es importante, primero se crean los fondos
         let bg2 = new Background(0,0,"url(/TPE3/background/bg2.png)",20);//y el orden de los fondos tambien importan, el primero tiene que ser el que esta "mas atras" y tiene que ser el mas lento
         let bg3 = new Background(0,0,"url(/TPE3/background/bg3.png)",15);
         let bg4 = new Background(0,0,"url(/TPE3/background/bg4.png)",9);// y el ultimo el "mas cercano", y se tiene que mover mas rapido
