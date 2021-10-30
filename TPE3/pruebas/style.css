@@ -1,0 +1,125 @@
+html,body{
+    margin: 0;
+    padding: 0;
+    background-color: white;
+}
+#container{
+    height: 1500px;
+    width: 800px;
+    
+    position: absolute;
+}
+.bg{
+    height: 600px;
+    width: 1067px;
+    position: absolute;
+}
+
+#player {
+  /* Tamaño de la viñeta individual */
+  width:35px;
+  height: 51px;
+  /* Cómo hay establecido un tamaño, centramos con margin:auto */
+
+  /* Cargamos el sprite (el repeat-x se puede omitir, por defecto se repite) */
+
+  /* Posicionamos el personaje sobre el camino de madera */
+  position:absolute;
+  transition: all 0.1s ease-in-out;
+}
+
+#token{
+  width: 50px;
+  height: 50px;
+  transition: all 0.1s ease-in-out;
+  position:absolute;
+}
+
+#octi {
+  width:64px;
+  height: 51px;
+  transition: all 0.1s ease-in-out;
+  position:absolute;
+}
+
+  @keyframes movebg {
+    0% { background-position:1067px } 
+  100% { background-position:0 }
+  }
+  @keyframes walk {
+      /* Partimos de la primera viñeta del sprite sheet */
+      0% { background-position: 0px; }
+      /* El tamaño total de ancho del sprite. Es negativo para que no "camine" hacia atrás */
+      100% { background-position:-210px }
+  }
+
+  @keyframes jump {
+    /* Partimos de la primera viñeta del sprite sheet */
+    0% { 
+      background-position: -210px; 
+      transform: translate(100px,460px);
+    }
+
+    50%{
+      transform: translate(100px,270px); 
+    }
+    /* El tamaño total de ancho del sprite. Es negativo para que no "camine" hacia atrás */
+    100% { 
+      background-position:-385px;
+      transform: translate(100px,460px); 
+    }
+  }
+
+  @keyframes token{
+    0% { 
+      transform: translate(800px, 270px); 
+    }
+    25%{
+      transform: translate(550px, 270px); 
+    }
+    50% {
+      transform: translate(300px, 270px); 
+    }
+    75%{
+      transform: translate(50px, 270px); 
+    }
+    100% { 
+      transform: translate(-200px, 270px); 
+    }
+  }
+
+  @keyframes octi{
+      /* Partimos de la primera viñeta del sprite sheet */
+      0% { 
+          background-position: 0px;
+          transform: translate(800px, 460px); 
+        }
+
+        25%{
+          transform: translate(550px, 460px); 
+        }
+
+        33%{
+          background-position: -448px;
+        }
+        34%{
+          background-position: 0;
+        }
+
+        50% {
+          background-position:-448px;
+          transform: translate(300px, 460px); 
+        }
+
+        
+        
+        75%{
+          transform: translate(50px, 460px); 
+        }
+
+      /* El tamaño total de ancho del sprite. Es negativo para que no "camine" hacia atrás */
+      100% { 
+          background-position:-448px;
+          transform: translate(-200px, 460px); 
+        }
+  }

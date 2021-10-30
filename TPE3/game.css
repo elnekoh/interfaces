@@ -1,0 +1,162 @@
+/* en esta hoja solo comentare las animaciones hechas con keyframes. se encuentran abajo del todo */
+html,body{
+    margin: 0;
+    padding: 0;
+    background-color: blanchedalmond;
+}
+#points{
+    width: 200px;
+    height: 50px;
+}
+.btn{
+    background-color: aqua;
+    border-radius: 15px;
+    border:solid 5px;
+    padding: 5px;
+    width: 75px;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    font-size:larger;
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+#btnReset{
+    background-color: red;
+}
+
+#btnReset:hover{
+    background-color: rgba(255,100,100,0.6);
+    transition: all 0.2s ease;
+}
+#container{
+    border-radius: 15px;
+    border:solid 15px;
+    margin: 15px;
+    overflow: hidden;
+}
+#container,.bg{
+    height: 600px;
+    width: 860px;
+    position: absolute;
+
+}
+.bg{
+    position: absolute;
+}
+
+#player{
+    width: 35px;
+    height: 51px;
+    position:absolute;
+}
+
+#octi{
+    width:64px;
+    height: 51px;
+    position:absolute;
+}
+
+#token{
+    width: 50px;
+    height: 50px;
+    position:absolute;
+}   
+
+#gameOver{
+    width: 835px;
+    height: 605px;
+    position: absolute;
+}
+
+/*este keyframe es para el movimiento del background, pense en hacer otro para cuando esta quieto, pero descubri que si
+le pones 0 segundos a la animacion, esta no se mueve */
+@keyframes movebg {
+    0% { background-position:1067px } 
+    100% { background-position:0 }
+}
+/*este keyframe es para el jugador corriendo */
+@keyframes run {
+    0% {
+        background-position: 0px;
+    }
+    100%{
+        background-position: -210px;
+    }
+}
+/*este keyframe tambien es para el jugador, es para cuando esta saltando,
+el spritesheet del jugador y de octi eran mucho mas complejos, lo que hacian que la imagenes sean mas pesadas.
+ademas no tenian fondo transparente, tuve que editarlos en photoshop, en el caso de el spritesheet del jugador borre todos los moviemientos
+solo deje su sprite de correr, y el del salto, y los puse uno al lado del otro asi queda como una tira y es mas facil de calcular
+el backgroundp-position */
+@keyframes jump {
+    0% {
+        background-position: -210px; 
+        transform: translate(100px,460px); /*primero el jugador esta en "el suelo */
+    }
+
+    50%{
+        transform: translate(100px,270px);/*al 50% estara en su punto maximo del salto, es genial por que a la mitad de la animacion del salto, 
+                                            al muñequito le cambia el pelo para arriba como si etuviera cayendo */
+    }
+
+    100%{
+        background-position: -385px;
+        transform: translate(100px,460px);/*y por ultimo vuelve al suelo */
+    }
+}
+/*la animacion de la moneda es muy simple, va desde punta A a punto B
+pero tuve que ponerle muchos porcentajes en medio por que iba dando "saltos" en lugar de ir "desplazandose"
+asi que en lugar de poner de 0% a 100%, va desde el 0 al 25 y del 25 al 50 y asi */
+@keyframes token{
+    0% { 
+        transform: translate(1067px, 270px); 
+    }
+    25%{
+        transform: translate(750px, 270px); 
+    }
+    50% {
+        transform: translate(433px, 270px); 
+    }
+    75%{
+        transform: translate(116px, 270px); 
+    }
+    100% { 
+        transform: translate(-200px, 270px); 
+    }
+  }
+
+  /*curisoamente la animacion de octi es mas compleja que la del jugador, siendo que octi solo tiene que aparecer en un punto
+  y ir a otro
+  lo que pasa con octi es que no me gustaba que tarde todo su recorrido en hacer su animacion (su animacion es mover un tentaculo y un poquito la cabeza)
+  asi que queria que lo haga 2 veces durante el recorrido, talvez no se nota mucho por que octi pasa muy rapido, pero si solo hace la animacion una vez
+  ni siquiera se llega an otar que se mueve
+  los puntos donde termina la animacion de octi son el enl 33 y obviamente el 100 (luego del 33 hago que empiece de nuevo) */
+@keyframes octi{
+    0% { 
+        background-position: 0px;
+        transform: translate(1000px, 460px); /*los translates son los mismos que los de el token, pero en el "suelo", por lo que lo unico que cambia con la moneda el el positionY */
+      }
+
+    25%{
+        transform: translate(750px, 460px);
+    }
+    33%{
+        background-position: -448px;
+    }
+    34%{
+        background-position: 0;
+    }
+    50%{
+        background-position: -448px;
+        transform: translate(433px,460px);
+    }
+    75%{
+        transform: translate(116px,460px);
+    }
+    100%{
+        background-position: -448px;
+        transform: translate(-200px,460px);
+    }
+}
