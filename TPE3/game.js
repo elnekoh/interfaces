@@ -171,20 +171,10 @@ document.addEventListener("DOMContentLoaded", ()=>{
      * @param {number} points estos son los puntos que hizo el jugador
      */
     function gameOver(points){
-        bg1.setIsMoving(false);//se cambia todos los isMoving
-        bg2.setIsMoving(false);
-        bg3.setIsMoving(false);
-        bg4.setIsMoving(false);
-        bg5.setIsMoving(false);
-        bg1.moveBg();//y se vuelve a dibujar el fondo
-        bg2.moveBg();
-        bg3.moveBg();
-        bg4.moveBg();
-        bg5.moveBg();
         let divGameOver = document.createElement("div");//crea un div para la imagen de gameover
         divGameOver.setAttribute("id","gameOver");
         document.getElementById("container").insertAdjacentElement("beforeend",divGameOver);
-        divGameOver.style.backgroundImage = "url(/TPE3/gameover.png)"
+        divGameOver.style.backgroundImage = "url(gameover.png)"
 
         let divReset = document.createElement("div");//crea un div para el boton de reset
         divReset.setAttribute("id","btnReset");
@@ -256,6 +246,16 @@ document.addEventListener("DOMContentLoaded", ()=>{
                 clearInterval(intervalGame);
                 clearInterval(intervalOcti);
                 clearInterval(intervalToken);
+                bg1.setIsMoving(false);//se cambia todos los isMoving
+                bg2.setIsMoving(false);
+                bg3.setIsMoving(false);
+                bg4.setIsMoving(false);
+                bg5.setIsMoving(false);
+                bg1.moveBg();//y se vuelve a dibujar el fondo
+                bg2.moveBg();
+                bg3.moveBg();
+                bg4.moveBg();
+                bg5.moveBg();
                 //y se llama al a funcion que nos muestra el game over ademas de el boton de reinicio y los puntos
                 gameOver(points);
             }
